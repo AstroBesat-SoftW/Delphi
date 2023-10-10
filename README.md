@@ -1,0 +1,2 @@
+# Delphi
+Delphi Tüm konular [*]
