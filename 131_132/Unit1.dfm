@@ -1,0 +1,46 @@
+object Form1: TForm1
+  Left = 169
+  Top = 301
+  Width = 928
+  Height = 474
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 312
+    Top = 40
+    Width = 32
+    Height = 13
+    Caption = 'Label1'
+  end
+  object ListBox1: TListBox
+    Left = 160
+    Top = 104
+    Width = 121
+    Height = 137
+    ItemHeight = 13
+    Items.Strings = (
+      '10'
+      '15'
+      '20'
+      '5'
+      '50')
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 336
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+end

@@ -1,0 +1,48 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+ procedure yap(deger:integer;var kat:integer; var yari:real);
+ begin
+  kat:=deger*2;//geriye dönecek ilk deger
+  yari:=deger/2//geriye döndürelecek olan 2 deger
+ end;
+procedure TForm1.Button1Click(Sender: TObject);
+const
+  x:integer=100;
+ var
+  ikikat:integer;
+  yarisi:real;
+begin
+  ikikat:=88;
+  yarisi:=99;
+  yap(x,ikikat,yarisi);// prosedur iþlediliyor
+
+  edit1.Text:= 'Girdiginiz Sayýnýn ikikatý='+ inttostr(ikikat);
+
+  edit2.Text:='Girdiniz sayýnýn yarýsý= '+ floattostr(yarisi);
+end;
+
+end.
