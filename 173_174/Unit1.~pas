@@ -1,0 +1,49 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure  idleolayi(sender:tobject;deger:boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+procedure tform1.idleolayi(sender:tobject;var deger:boolean);
+var
+adet:integer;
+begin
+adet:=length(edit1.text );
+if adet>0 then
+  begin
+    button1.Enabled=True;
+    form1.caption:='þuan button aktif';
+  end
+else
+  begin
+    button1.Enabled=false;
+    form1.caption:= 'Þuan da Button Pasif';
+  end;
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+application.OnIdle:=idleolayi;
+end;
+
+
+end.
